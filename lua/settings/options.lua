@@ -6,7 +6,7 @@
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -26,9 +26,9 @@ end)
 vim.opt.breakindent = true
 
 -- Tab settings
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 3
+vim.opt.softtabstop = 3
+vim.opt.shiftwidth = 3
 vim.opt.expandtab = true
 
 -- Save undo history

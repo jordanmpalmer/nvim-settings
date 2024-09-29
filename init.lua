@@ -14,6 +14,20 @@ vim.api.nvim_set_keymap('i', 'nn', '<Esc>', { noremap = true })
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
+vim.o.clipboard = 'unnamedplus'
+vim.g.clipboard = {
+  name = 'win32yank-wsl',
+  copy = {
+    ['+'] = '/mnt/c/Users/jorda/OneDrive/Documents/WSLPlugins/win32yank.exe -i --crlf',
+    ['*'] = '/mnt/c/Users/jorda/OneDrive/Documents/WSLPlugins/win32yank.exe -i --crlf',
+  },
+  paste = {
+    ['+'] = '/mnt/c/Users/jorda/OneDrive/Documents/WSLPlugins/win32yank.exe -o --lf',
+    ['*'] = '/mnt/c/Users/jorda/OneDrive/Documents/WSLPlugins/win32yank.exe -o --lf',
+  },
+  cache_enabled = 0,
+}
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -116,7 +130,7 @@ require('lazy').setup({
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+      vim.keymap.set('n', '<leader>st', builtin.find_files, { desc = "[S]earch [T]'files" })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
