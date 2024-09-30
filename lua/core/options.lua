@@ -3,7 +3,7 @@
 --  For more options `:help option-list`
 
 -- tree mode in nvim file explorer
-vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd 'let g:netrw_liststyle = 3'
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -25,7 +25,7 @@ opt.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+   vim.opt.clipboard = 'unnamedplus'
 end)
 
 -- opt.clipboard:append('unnamedplus')
@@ -75,9 +75,8 @@ opt.cursorline = true
 opt.scrolloff = 10
 
 opt.termguicolors = true
-opt.background = "dark" -- colorschemer that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+opt.background = 'dark' -- colorschemer that can be light or dark will be made dark
+opt.signcolumn = 'yes' -- show sign column so that text doesn't shift
 
--- backspace 
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line, or insert mode start position
-
+-- backspace
+opt.backspace = 'indent,eol,start' -- allow backspace on indent, end of line, or insert mode start position
