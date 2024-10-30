@@ -42,3 +42,8 @@ require('lazy').setup({ { import = 'plugins' }, { import = 'plugins.lsp' } }, {
       notify = false,
    },
 })
+
+if vim.fn.has 'termguicolors' == 1 then
+   vim.opt.termguicolors = true
+end
+vim.cmd 'colorscheme tokyonight'
